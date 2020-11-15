@@ -11,7 +11,7 @@ function PostCard({
   post: { body, createdAt, id, username, likeCount, commentCount, likes },
 }) {
   const { user } = useContext(AuthContext);
-console.log(user)
+
   return (
     <Card fluid>
       <Card.Content>
@@ -19,7 +19,7 @@ console.log(user)
           floated="right"
           size="mini"
           src="https://react.semantic-ui.com/images/avatar/large/molly.png"
-          as={Link} to={`/users/${user.id}`}
+          // as={Link} to={`/users/${user.id}`}
         />
         <Card.Header as={Link} to={`/users/${user.id}`}>{username}</Card.Header>
         <Card.Meta as={Link} to={`/posts/${id}`}>
